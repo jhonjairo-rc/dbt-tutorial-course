@@ -32,4 +32,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_loki:
-    +materialized: table
+    +materialized: table # Default all SQL models to be materialized as tables
+    +persist_docs: # writes all of our column description into BigQuery!
+      relation: true
+      columns: true

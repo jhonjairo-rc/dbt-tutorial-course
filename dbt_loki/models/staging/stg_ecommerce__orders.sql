@@ -10,9 +10,9 @@ SELECT
         status,
         gender,
         created_at,
-        --returned_at,
+        returned_at,
         shipped_at,
-        --delivered_at,
-        num_of_item
+        delivered_at,
+        num_of_item as num_items_ordered
 
 FROM source
